@@ -1,0 +1,46 @@
+@use "sizes" as *;
+
+// Contextual font properties
+$-ff-overpass: #{"\"Overpass\", sans-serif"};
+$-ff-ubuntu: #{"\"Ubuntu\", sans-serif"};
+
+// Default font weights
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+$font-weight-heavy: 900;
+
+// Font map for generating font utility classes
+$utility-font: (
+    "family": (
+        "overpass": $-ff-overpass,
+        "ubuntu": $-ff-ubuntu,
+    ),
+);
+
+// Font map for generating custom font properties
+$contextual-font: (
+    "family": (
+        "body": $-ff-overpass,
+        "heading": $-ff-ubuntu,
+    ),
+    "size": (
+        "body": 1rem,
+        "h1": 3rem,
+        "h2": 2rem,
+        "h2-main": clamp(2rem, 5svw + 1rem, 3rem),
+    ),
+    "weight": (
+        "body": $font-weight-light,
+        "link": $font-weight-semi-bold,
+        "header-heading": $font-weight-medium,
+        "main-heading": $font-weight-bold,
+        "main-heading-sub": $font-weight-normal,
+    ),
+);
+

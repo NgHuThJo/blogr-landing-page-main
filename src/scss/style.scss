@@ -1,0 +1,47 @@
+@use "./abstracts/" as *;
+@use "./base/" as *;
+@use "./components/" as *;
+@use "./layout/" as *;
+@use "./utilities/" as *;
+
+// General styles
+body {
+    > * {
+        grid-column: full-width;
+    }
+}
+
+.header,
+.main,
+.footer {
+    @include grid;
+
+    // grid-template-columns: subgrid;
+    // grid-column: breakout;
+}
+
+.header {
+    color: hsl(var(--c-header));
+    background-image: var(--bgi-intro),
+                      url("../../images/bg-pattern-intro-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include min-query("s") {
+        background-image: var(--bgi-intro),
+                          url("../../images/bg-pattern-intro-desktop.svg");
+    }
+}
+
+.footer {
+    background-color: hsl(var(--bgc-footer));
+}
+
+// Specific rules
+.cta {
+    --_c-cta: var(--c-cta);
+    --_bgc-cta: var(--bgc-cta);
+
+    color: hsl(var(--_c-cta));
+    background-color: hsl(var(--bgc-cta));
+}

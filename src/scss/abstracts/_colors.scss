@@ -1,0 +1,55 @@
+// Primary colors
+// Naming convention based on position in color wheel
+// 30 - 210: warm - mid - cool
+// 210 - 30: cool - mid - warm
+$c-red-c-300: 356 100% 66%; // c cta
+$c-red-c-200: 255 100% 74%; // bgc cta hover
+$c-cyan-c-700: 208 49% 24%; // heading
+
+// Neutral colors
+$c-white-000: 0 0% 100%; // c text
+$c-blue-m-200: 240 2% 79%; // c footer
+$c-cyan-c-600: 297 13% 34%; // c body
+$c-blue-m-800: 240 10% 16%; // bgc footer
+
+// Gradients
+$c-red-w-200: 13 100% 72%; // bgc intro
+$c-red-c-250: 353 100% 62%;
+
+$c-blue-c-700: 237 17% 21%; // bgc body
+$c-blue-c-600: 237 23% 32%;
+
+// Color map for generating color utility classes
+$utility-color: (
+);
+
+// Color map for generating custom color properties
+$contextual-color: (
+  "color": (
+    "body": $c-cyan-c-600,
+    "header": $c-white-000,
+  ),
+  "background-color": ( 
+    "body": $c-white-000,
+    "footer": $c-blue-m-800,
+  ),
+  "background-image": (
+    "intro": linear-gradient(to right, hsl($c-red-w-200), hsl($c-red-c-250)),
+  ),
+);
+
+// Theme map for generating theme classes
+$theme-color: (
+  "dark": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+  "light": (
+    "color": (
+    ),
+    "background-color": (
+    ),
+  ),
+);
